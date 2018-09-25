@@ -1,0 +1,239 @@
+.menu {
+	position: relative;
+
+	&-search {
+		display:flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		padding-bottom: 10px;
+		@include md {
+			padding-bottom: 0;
+		}
+		input {
+			display: none;
+			@include md {
+				
+				display: block;
+				width: 250px;
+			}
+			@include lg {
+				width: 400px;
+			}			
+			height: 30px;
+			font-size: 0.65em;
+		}
+	}
+
+	&-mobile {
+		@include md {
+			display: none;
+		}
+		a {
+			color: #636466;
+			&:hover {
+				text-decoration: none;
+				color: lightgray;
+			}			
+		}
+		span {
+			padding: 0 0.5em;
+			color: #636466;
+			&:hover {
+				text-decoration: none;
+				color: lightgray;
+			}
+		}
+	}
+
+	&-button {
+		margin-top: 10px;
+		border: none;
+		background: white;
+	}
+
+	&-account {
+		display: none;
+		@include md {
+			display: block;
+		}
+		a {
+			color: black;
+			transition: color 0.1s ease-in-out;
+			font-size: 0.75em;
+			&:hover {
+				color: lightgray;
+			}
+		}
+	}
+
+	&-banner {
+		padding: 0.25em;
+		background-color: #8cc7ff;
+		flex-direction: row;
+		a {
+			border-bottom: 2px solid #8cc7ff;
+			color: white;
+			padding: 0 0.25em;
+			font-size: 0.75em;
+			&:hover {
+				text-decoration: none;
+				border-bottom: 2px solid white;
+			}			
+		}
+		span {
+			padding: 10px;
+			font-size: 25px;
+			color: black;
+		}			
+		@include md {
+			a {
+				font-size: 1em;
+			}			
+			flex-wrap: wrap;
+		}
+	}
+	&-logo {
+		margin-top: 10px;
+		width: auto;
+		height: 40px;
+		@include md {
+			height: 60px;
+		}
+
+	}
+	&-items-wrapper {
+		display: none;
+		@include md {
+			display: block;
+		}
+	}
+	&-navigation-items {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		@include md {
+			flex-direction: row;
+			flex-wrap: wrap;
+		}
+	}
+	&-nav-item {
+		text-align: center;
+		width: 100%;
+		border-bottom: 2px solid #8cc7ff;
+		padding: 0.5em 0.5em;
+		@include md {
+			padding: 0 0.5em;	
+			width: unset;
+			border: none;		
+		}
+		white-space: nowrap;
+		color: black;
+		transition: color 0.1s ease-in-out;
+		font-size: 0.75em;
+		&:hover {
+			color: lightgray;
+		}
+	}
+
+	&-pipe {
+		display: none;
+		color: lightgray;
+		margin: 0.5em;
+		@include md {
+			display: inline;
+		}
+	}
+
+	hr {
+		margin-top: 1.5em;
+		position: absolute;
+		width: 100%;
+		display: none;
+		@include md {
+			display:block;
+		}
+	}
+}
+
+.breadcrumbs {
+	margin-top: 20px;
+	font-size: 0.75em;
+	display: none;
+	padding: 20px;
+	background-color: #f8f8f8;
+	@include md {
+		display: flex;
+	}
+	a {
+		color: gray;
+		transition: color 0.1s ease-in-out;
+		&:hover {
+			color: black;
+		}
+	}
+	li {
+		color: black;
+		display: inline;
+	}
+}
+
+.product {
+	&-info {
+		font-size: 1em;
+		background: #f8f8f8;
+		padding: 40px;
+		.form-control {
+			margin-top: 10px;
+		}
+		.btn {
+			margin-top: 10px;
+			margin-left: 10px;
+		}		
+	}
+	&-feefo-logo {
+		height: 20px;
+		width: auto;
+		margin-left: 10px;
+	}
+	&-rating {
+		display: flex;
+		align-items: center;
+		.icon-star-full {
+			color: #fff257;
+		}
+	}
+	&-price {
+		span {
+			text-decoration: line-through;
+			color:lightgray;
+		}
+	}
+
+	&-carousel {
+		padding: 20px;
+		@include md {
+			padding: 0;			
+		}
+		position: relative;
+	}
+	&-arrow-wrapper {
+		span {
+			padding: 0 80px;
+		}
+		display: flex;
+		justify-content: center;
+		@include md {
+			span {
+				padding: 0;
+			}
+			justify-content: space-between;
+		}
+	}
+
+}
+
+.slider-img {
+	width: 100%;
+}

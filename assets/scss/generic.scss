@@ -1,0 +1,94 @@
+// Small tablets and large smartphones (landscape view)
+$screen-sm-min: 576px;
+// Small tablets (portrait view)
+$screen-md-min: 768px;
+// Tablets and small desktops
+$screen-lg-min: 992px;
+// Large tablets and desktops
+$screen-xl-min: 1200px;
+// Extra Large tablets and desktops
+$screen-xxl-min: 1600px;
+// Small devices
+@mixin sm {
+   @media (min-width: #{$screen-sm-min}) {
+       @content;
+   }
+}
+// Medium devices
+@mixin md {
+   @media (min-width: #{$screen-md-min}) {
+       @content;
+   }
+}
+// Large devices
+@mixin lg {
+   @media (min-width: #{$screen-lg-min}) {
+       @content;
+   }
+}
+// Extra large devices
+@mixin xl {
+   @media (min-width: #{$screen-xl-min}) {
+       @content;
+   }
+}
+// Extra large devices
+@mixin xxl {
+   @media (min-width: #{$screen-xxl-min}) {
+       @content;
+   }
+}
+// Example Usage
+// @include lg {
+//   font-size: 18px;
+// }
+
+
+// JS BREAKPOINTS
+#mobile-visible { display: block}
+#sm-visible, #md-visible, #lg-visible, #xl-visible, #xxl-visible {display:none;}
+@include sm {
+	#mobile-visible, #md-visible, #lg-visible, #xl-visible, #xxl-visible { display: none;}
+	#sm-visible {display:block;}
+}
+@include md {
+	#mobile-visible, #sm-visible, #lg-visible, #xl-visible, #xxl-visible { display: none;}
+	#md-visible {display:block;}
+}
+@include lg {
+	#mobile-visible, #sm-visible, #md-visible, #xl-visible, #xxl-visible { display: none;}
+	#lg-visible {display:block;}
+}
+@include xl {
+	#mobile-visible, #sm-visible, #md-visible, #lg-visible, #xxl-visible { display: none;}
+	#xl-visible {display:block;}
+}
+@include xxl {
+	#mobile-visible, #sm-visible, #md-visible, #lg-visible, #xl-visible,  { display: none;}
+	#xxl-visible {display:block;}
+}
+
+.f-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+
+  > .col,
+  > [class*="col-"] {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+.wrapper {
+	margin-left: auto;
+	margin-right: auto;
+	@include md {
+		width: 80%;
+	} 	
+}
